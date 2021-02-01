@@ -19,18 +19,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 40px;
+  padding: 0px 80px;
+}
+
+.brand {
+  padding: 65px 0px;
 }
 
 .brand img {
-  max-width: 30%;
+  max-width: 200px;
 }
 
 .content-container {
@@ -39,16 +40,12 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .cta-image {
-  max-width: 670px;
-  -ms-flex-preferred-size: 95%;
-      flex-basis: 95%;
-  padding-right: 2%;
+  max-width: 700px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .cta-image img {
@@ -56,9 +53,42 @@
 }
 
 .cta-info {
-  max-width: 670px;
+  margin-top: 3%;
+  padding-left: 30px;
+  max-width: 550px;
   -ms-flex-preferred-size: 95%;
       flex-basis: 95%;
+}
+
+.cta-info h1 {
+  font-size: 35px;
+  padding: 0px 100px 20px 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-info p {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 60px 20px 0px;
+}
+
+.cta-info button {
+  cursor: pointer;
+  border: none;
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #674baf;
+  background-color: white;
+  font-size: 16px;
+  -webkit-box-shadow: 5px 5px 20px -5px black;
+          box-shadow: 5px 5px 20px -5px black;
+}
+
+.cta-info button:hover {
+  color: white;
+  background-color: #e882e8;
 }
 
 .social-media-icons {
@@ -66,18 +96,50 @@
       align-self: flex-end;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1289px) {
   .container {
-    height: 100vh;
+    padding: 0px 20px;
+    height: initial;
     width: initial;
     background: url(../images/bg-mobile.svg), #674baf;
     background-repeat: no-repeat;
+    background-position: center top;
     background-size: contain;
+  }
+  .content-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cta-info {
+    text-align: center;
+    margin: 3% 0;
+    padding-left: 0px;
+  }
+  .cta-info h1 {
+    font-size: 30px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+  }
+  .cta-info p {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0px 0px 20px 0px;
+  }
+  .cta-info button {
+    height: 40px;
+  }
+  .cta-image {
+    min-width: initial;
   }
   .social-media-icons {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding-top: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
