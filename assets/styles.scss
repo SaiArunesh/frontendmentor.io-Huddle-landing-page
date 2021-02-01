@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    height: 800px;
+    width: 1440px;
+    background-color: $violet;
+    background: url("../images/bg-desktop.svg"), $violet;
+    background-repeat: no-repeat;
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.brand {
+    img {
+        max-width: 30%;
+    }
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-image {
+    max-width: 670px;
+    flex-basis: 95%;
+    padding-right: 2%;
+    img {
+        width: 100%;
+    }
+}
+
+.cta-info {
+    max-width: 670px;
+    flex-basis: 95%;
+}
+
+.social-media-icons {
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 1439px) {
+    .container {
+        height: 100vh;
+        width: initial;
+
+        background: url(../images/bg-mobile.svg), #674baf;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        
+    }
+    .social-media-icons {
+        align-self: center;
+    }
+}
